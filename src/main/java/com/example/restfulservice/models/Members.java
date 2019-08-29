@@ -1,4 +1,4 @@
-package com.example.models;
+package com.example.restfulservice.models;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -7,6 +7,7 @@ public class Members {
 
     @Id
     private ObjectId _id;
+
     private String firstName;
     private String lastName;
     private String username;

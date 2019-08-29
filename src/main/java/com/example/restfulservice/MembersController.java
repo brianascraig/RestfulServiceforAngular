@@ -1,7 +1,7 @@
-package com.example;
+package com.example.restfulservice;
 
-import com.example.models.Members;
-import com.example.repositories.MembersRepository;
+import com.example.restfulservice.models.Members;
+import com.example.restfulservice.repositories.MembersRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

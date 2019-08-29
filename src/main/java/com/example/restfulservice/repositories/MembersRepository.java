@@ -1,6 +1,6 @@
-package com.example.repositories;
+package com.example.restfulservice.repositories;
 
-import com.example.models.Members;
+import com.example.restfulservice.models.Members;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
