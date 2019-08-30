@@ -37,7 +37,7 @@ public class MembersController {
 
     //Post
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Members createMembers(@Valid @RequestBody Members members) {
+    public Members createMembers(@RequestBody Members members) {
         members.set_id(ObjectId.get());
         repository.save(members);
         return members;
