@@ -5,7 +5,6 @@ import com.example.restfulservice.repositories.MembersRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.List;
 
@@ -15,7 +14,9 @@ public class MembersController {
 
     @Autowired
     private MembersRepository repository;
-// Get All
+
+
+    // Get All
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<Members> getAllMembers() {
         return repository.findAll();
@@ -34,8 +35,8 @@ public class MembersController {
         repository.save(members);
     }
 
-
     //Post
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public Members createMembers(@Valid @RequestBody Members members) {
         members.set_id(ObjectId.get());
